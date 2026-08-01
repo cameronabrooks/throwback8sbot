@@ -992,7 +992,7 @@ client.on('guildMemberAdd', async member => {
   }
 
   try {
-    await member.roles.add('SET_MEMBER_ROLE_ID', 'Auto-assigned on join'); // TODO: set this server's default member role ID
+    await member.roles.add('1532809524375715860', 'Auto-assigned on join');
   } catch (e) {
     logger.error({ err: e, guild: member.guild.id, user: member.id }, 'Failed to assign member role on join');
   }
