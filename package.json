@@ -1,0 +1,22 @@
+{
+  "name": "throwback8sbot",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy-commands": "node scripts/deploy-commands.js",
+    "clear-commands": "node scripts/clear-all-commands.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.10.1",
+    "discord-api-types": "^0.38.49",
+    "discord.js": "^14.26.4",
+    "dotenv": "^16.6.1",
+    "pino": "^8.18.0",
+    "pino-pretty": "^10.1.0",
+    "shoukaku": "^4.1.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
+  }
+}

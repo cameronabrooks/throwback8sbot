@@ -1,0 +1,24 @@
+{
+  "hardpoint": [
+    "Den",
+    "Frequency",
+    "Gridlock",
+    "Hacienda",
+    "Sake",
+    "Scar"
+  ],
+  "search_and_destroy": [
+    "Den",
+    "Fringe",
+    "Gridlock",
+    "Hacienda",
+    "Raid",
+    "Sake"
+  ],
+  "overload": [
+    "Den",
+    "Exposure",
+    "Gridlock",
+    "Scar"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "Hardpoint": [
+    "Colossus",
+    "Den",
+    "Gridlock",
+    "Hacienda",
+    "Sake",
+    "Scar"
+  ],
+  "Search & Destroy": [
+    "Den",
+    "Fringe",
+    "Gridlock",
+    "Hacienda",
+    "Raid",
+    "Sake"
+  ],
+  "Overload": [
+    "Den",
+    "Exposure",
+    "Gridlock",
+    "Scar"
+  ]
+}

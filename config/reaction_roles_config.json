@@ -1,0 +1,24 @@
+{
+  "groups": [
+    {
+      "id": "games",
+      "name": "Game/Mode Pings",
+      "title": null,
+      "roles": [
+        { "id": "8s", "label": "8s", "emoji": "🎱", "roleId": "SET_8S_ROLE_ID" },
+        { "id": "snd_8s", "label": "SND 8s", "emoji": "🎯", "roleId": "SET_SND_8S_ROLE_ID" },
+        { "id": "other_games", "label": "Other Games", "emoji": "🎮", "roleId": "SET_OTHER_GAMES_ROLE_ID" }
+      ]
+    },
+    {
+      "id": "role_type",
+      "name": "What Role Do You Run?",
+      "title": "What role do you run?",
+      "roles": [
+        { "id": "ar", "label": "AR", "emoji": null, "roleId": "SET_AR_ROLE_ID" },
+        { "id": "sub", "label": "SUB", "emoji": null, "roleId": "SET_SUB_ROLE_ID" },
+        { "id": "flex", "label": "FLEX", "emoji": null, "roleId": "SET_FLEX_ROLE_ID" }
+      ]
+    }
+  ]
+}

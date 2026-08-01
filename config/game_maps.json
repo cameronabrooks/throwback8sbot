@@ -1,0 +1,22 @@
+{
+  "vanguard": {
+    "label": "Vanguard",
+    "hardpoint": ["Tuscan", "Bocage", "Gavutu", "Berlin", "Desert Siege"],
+    "search_and_destroy": ["Tuscan", "Bocage", "Desert Siege", "Berlin", "Demyansk"]
+  },
+  "coldwar": {
+    "label": "Cold War",
+    "hardpoint": ["Raid", "Moscow", "Checkmate", "Garrison", "Apocalypse"],
+    "search_and_destroy": ["Raid", "Moscow", "Miami", "Standoff", "Express"]
+  },
+  "mw3": {
+    "label": "MW3",
+    "hardpoint": ["Karachi", "6 Star", "Rio", "Sub Base", "Vista"],
+    "search_and_destroy": ["Karachi", "Highrise", "Invasion", "6 Star", "Rio"]
+  },
+  "bo6": {
+    "label": "BO6",
+    "hardpoint": ["Hacienda", "Vault", "Rewind", "Red Card", "Skyline"],
+    "search_and_destroy": ["Hacienda", "Protocol", "Rewind", "Red Card", "Dealership"]
+  }
+}

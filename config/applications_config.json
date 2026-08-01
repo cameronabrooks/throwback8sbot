@@ -1,0 +1,37 @@
+{
+  "categories": [
+    {
+      "id": "staff",
+      "name": "Staff Application",
+      "description": "Apply to join the staff team",
+      "emoji": "🛠️",
+      "notificationChannelId": "SET_STAFF_APP_NOTIFICATION_CHANNEL_ID",
+      "questions": [
+        "Have you gone over Staff responsibilities",
+        "Why do you think you would be good for staff?",
+        "Are you staff in any other communities?",
+        "Do you agree to enforce the rules?"
+      ],
+      "rolesOnApproval": [],
+      "requireRoleToApply": false,
+      "applyRoleIds": [],
+      "requireRoleToProcess": false,
+      "processRoleIds": [],
+      "missingRoleError": "❌ You do not meet the requirements to apply for this category."
+    }
+  ],
+  "messages": {
+    "info": "Select a category below to start an application.",
+    "question": "**Question %currentQuestionNumber%/%amountOfTotalQuestions%** for %applicationName%:\n%question%",
+    "submitted": "✅ Your application for **%applicationName%** has been submitted! Staff will review it and follow up with a decision.",
+    "registered": "✅ Your **%applicationName%** is complete — you're all set!",
+    "approved": "✅ Your **%applicationName%** application has been approved!%reason%",
+    "denied": "❌ Your **%applicationName%** application has been denied.%reason%"
+  },
+  "requireReasonOnDecision": false,
+  "cooldown": {
+    "enabled": true,
+    "durationMs": 1209600000,
+    "message": "⏳ You must wait before applying again. You can re-apply %timeRelative% (%timeAbsolute%)."
+  }
+}
