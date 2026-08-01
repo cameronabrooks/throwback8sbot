@@ -2,22 +2,13 @@
   "groups": [
     {
       "id": "games",
-      "name": "Game/Mode Pings",
-      "title": null,
+      "name": "Game Pings",
+      "title": "Which games do you play?",
       "roles": [
-        { "id": "8s", "label": "8s", "emoji": "🎱", "roleId": "SET_8S_ROLE_ID" },
-        { "id": "snd_8s", "label": "SND 8s", "emoji": "🎯", "roleId": "SET_SND_8S_ROLE_ID" },
-        { "id": "other_games", "label": "Other Games", "emoji": "🎮", "roleId": "SET_OTHER_GAMES_ROLE_ID" }
-      ]
-    },
-    {
-      "id": "role_type",
-      "name": "What Role Do You Run?",
-      "title": "What role do you run?",
-      "roles": [
-        { "id": "ar", "label": "AR", "emoji": null, "roleId": "SET_AR_ROLE_ID" },
-        { "id": "sub", "label": "SUB", "emoji": null, "roleId": "SET_SUB_ROLE_ID" },
-        { "id": "flex", "label": "FLEX", "emoji": null, "roleId": "SET_FLEX_ROLE_ID" }
+        { "id": "bo6", "label": "BO6", "emoji": "🔥", "roleId": "1532791354130698461" },
+        { "id": "mw3", "label": "MW3", "emoji": "🎯", "roleId": "1532791246857310248" },
+        { "id": "coldwar", "label": "Cold War", "emoji": "❄️", "roleId": "1532906169385877514" },
+        { "id": "vanguard", "label": "Vanguard", "emoji": "⚔️", "roleId": "1532907753637412894" }
       ]
     }
   ]
