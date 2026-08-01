@@ -75,7 +75,7 @@ const _modmailThreadMap = new Map(); // user ID -> ticket channel ID mapping
 // Welcome message configuration
 const WELCOME_CHANNEL_ID = '1532815441657860176';
 function buildWelcomeMessage(member) {
-  return `Welcome <@${member.id}> to Throwback 8s! Grab your roles (<#1532817024172949504>) and jump into the 8s queue whenever you're ready.
+  return `Welcome <@${member.id}> to Throwback 8s! Grab your roles (<#1532930768613937172>) and jump into the 8s queue whenever you're ready.
 
 If you have any questions, DM the bot and a member of staff will reach out to assist!`;
 }
