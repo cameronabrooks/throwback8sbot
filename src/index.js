@@ -66,7 +66,9 @@ const MODMAIL_CATEGORY_ID = '1532928998693273802'; // category where ticket chan
 
 const MODMAIL_LOG_CHANNEL_ID = '1532929061742182581'; // channel where closed ticket logs are posted
 
-const MODMAIL_STAFF_ROLE_ID = 'SET_MODMAIL_STAFF_ROLE_ID';
+const MODMAIL_STAFF_ROLE_ID = '1532943445927395598'; // pinged when a new ticket opens
+// Anyone holding one of these roles can reply inside modmail ticket channels.
+const MODMAIL_REPLY_ROLE_IDS = new Set(['1532791099771326594', '1532943445927395598']);
 
 const MODMAIL_CLOSE_COMMAND = /^\/close$/i;
 
@@ -2773,13 +2775,13 @@ client.on(Events.MessageCreate, async message => {
 
 
 
-    // Check if user has staff role
+    // Check if user has a role allowed to reply in modmail
 
     let isStaff = false;
 
     if (message.member) {
 
-      isStaff = message.member.roles.cache.has(MODMAIL_STAFF_ROLE_ID);
+      isStaff = message.member.roles.cache.some(r => MODMAIL_REPLY_ROLE_IDS.has(r.id));
 
     }
 
