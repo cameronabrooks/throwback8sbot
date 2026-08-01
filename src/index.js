@@ -62,7 +62,7 @@ const AUTOMOD_TIMEOUT_MS = 5 * 60 * 1000; // 5 minutes
 
 // Modmail configuration — TODO: fill in for this server.
 
-const MODMAIL_CATEGORY_ID = 'SET_MODMAIL_CATEGORY_ID'; // category where ticket channels are created
+const MODMAIL_CATEGORY_ID = '1532928998693273802'; // category where ticket channels are created
 
 const MODMAIL_LOG_CHANNEL_ID = '1532929061742182581'; // channel where closed ticket logs are posted
 
