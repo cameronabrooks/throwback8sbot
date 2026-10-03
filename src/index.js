@@ -2195,10 +2195,13 @@ client.on('interactionCreate', async interaction => {
 
   if (interaction.isStringSelectMenu() && interaction.customId.startsWith('q8_pick_')) {
     const { handlePick } = require('../lib/queue8');
-    const captainId = interaction.customId.slice('q8_pick_'.length);
     const pickedId = interaction.values[0];
     await interaction.deferUpdate();
-    const result = await handlePick(interaction.channelId, captainId, pickedId);
+    // Authorize against whoever actually clicked, not the captain id baked into the customId.
+    const result = await handlePick(interaction.channelId, interaction.user.id, pickedId);
+    if (result.status === 'not_captain') {
+      return interaction.followUp({ content: '❌ Only the team captains can pick players.', ephemeral: true });
+    }
     if (result.status === 'not_your_turn') {
       return interaction.followUp({ content: "❌ It's not your turn to pick.", ephemeral: true });
     }
@@ -2253,7 +2256,8 @@ client.on('interactionCreate', async interaction => {
   if (interaction.isStringSelectMenu() && interaction.customId === 'q8_capvote') {
     const { handleCaptainVote } = require('../lib/queue8');
     await interaction.deferUpdate();
-    await handleCaptainVote(interaction.channelId, interaction.user.id, interaction.values);
+    const result = await handleCaptainVote(interaction.channelId, interaction.user.id, interaction.values);
+    if (result.status === 'not_in_queue') return interaction.followUp({ content: '❌ Only the 8 players in this match can vote for captains.', ephemeral: true });
     return;
   }
 
@@ -2261,7 +2265,7 @@ client.on('interactionCreate', async interaction => {
     const { randomizeCaptains } = require('../lib/queue8');
     await interaction.deferUpdate();
     const result = await randomizeCaptains(interaction.channelId, interaction.user.id);
-    if (result.status === 'not_in_queue') return interaction.followUp({ content: '❌ You are not in this queue.', ephemeral: true });
+    if (result.status === 'not_in_queue') return interaction.followUp({ content: '❌ Only the 8 players in this match can pick captains.', ephemeral: true });
     return;
   }
 
