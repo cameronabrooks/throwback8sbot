@@ -31,4 +31,6 @@ build/
 # Live runtime state -- mutates constantly while the bot runs, must never be
 # reset by a git pull on the host
 data/youtube_cookies.txt
+data/active_matches.json
+data/active_matches.json.tmp
 bin/
