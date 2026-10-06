@@ -9,7 +9,12 @@ module.exports = {
   async execute(interaction) {
     await interaction.deferReply({ ephemeral: true });
     const result = await handleCancelVote(interaction.channelId, interaction.user.id);
-    if (result.status === 'no_match') return interaction.editReply('❌ There is no active match.');
+    if (result.status === 'no_match') {
+      const orphaned = /^queue-\d+$/.test(interaction.channel?.name ?? '');
+      return interaction.editReply(orphaned
+        ? '❌ The bot lost track of this match (it probably restarted). Ask staff to run `/outcomecancel` in this channel to clean it up.'
+        : '❌ There is no active match.');
+    }
     if (result.status === 'not_in_match') return interaction.editReply('❌ You are not in the active match.');
     if (result.status === 'no_channel') return interaction.editReply('❌ Match channel not found.');
     if (result.status === 'cancelled') return interaction.editReply('🚫 Match cancelled.');
